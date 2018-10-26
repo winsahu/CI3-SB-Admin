@@ -1,6 +1,6 @@
 # CI3-SB-Admin
-Ini Adalah arsip Codeigniter versi 3.1.9 yang ditambahkan template SB Admin - Bootstrap 4.1.3
-Cara integrasi dapat dilihat pada controller Welcome yang sudah di modifikasi untuk menunjuk ke folder view/welcome
+Ini Adalah arsip Codeigniter versi 3.1.9 yang ditambahkan template SB Admin - Bootstrap 4.1.3\
+Cara integrasi dapat dilihat pada controller Welcome yang sudah di modifikasi untuk menunjuk ke folder views/welcome
 
 //Controller:
 ```
@@ -44,4 +44,4 @@ $this->load->view('layout/fix_menu');
 $this->load->view('layout/footer');
 ?>
 ```
-Untuk file view/layout/header.php, view/layout/footer.php, view/layout/fix-menu.php dan views/welcome/footer_js.php silahkan di lihat langsung
+Untuk file views/layout/header.php, views/layout/footer.php, views/layout/fix-menu.php dan views/welcome/footer_js.php silahkan di lihat langsung
