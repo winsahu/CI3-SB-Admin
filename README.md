@@ -16,11 +16,11 @@ Bila ingin menambahkan bootstrap modal dialog maka buatlah pada file views/welco
 
 //View
 // file: views/welcome/index.php
-<?php
+&lt;?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('layout/header');
 $this->load->view('layout/fix_menu');
-?>
+?&gt;
 <div id="container">
 	<h1><?= $title; ?>!</h1>
 
@@ -38,8 +38,8 @@ $this->load->view('layout/fix_menu');
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
-<?php
+&lt;?php
 $this->load->view('layout/footer');
-?>
+?&gt;
 
 Untuk file view/layout/header.php, view/layout/footer.php, view/layout/fix-menu.php dan views/welcome/footer_js.php silahkan di lihat langsung
