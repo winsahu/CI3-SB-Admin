@@ -15,7 +15,7 @@ public function index() {
 ```
 Bila ingin menambahkan bootstrap modal dialog maka buatlah pada file views/welcome/footer_modal.php
 
-//View
+//View\
 // file: views/welcome/index.php
 ```
 <?php
