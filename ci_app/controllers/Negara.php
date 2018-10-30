@@ -8,6 +8,12 @@ class Negara extends CI_Controller {
 		$this->load->helper(array('url', 'form'));
 		$this->load->library(array('form_validation', 'session', 'pagination'));
 		$this->load->model('negara_model', 'nm');
+		$level = $this->session->userdata('level');
+		if (($level == 'admin') || ($level == 'dosen') || ($level == 'mahasiswa') || ($level == 'operator')) {
+			//do nothing
+		} else {
+			redirect('login');
+		}
 	}
 
 	public function index()	{
