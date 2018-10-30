@@ -41,15 +41,17 @@ class Negara extends CI_Controller {
 
 		// All records count
 		$allcount = $this->nm->count_all($search_text);
-		// Get records
-		$countries_record = $this->nm->getData($rowno, $rowperpage, $search_text);
 
 		$max_pagno = ceil($allcount / $rowperpage);
 		if ($pagno > $max_pagno) {
 			$pagno = $max_pagno;
 		}
+
 		// Row position
 		$rowno = ($pagno - 1) * $rowperpage;
+
+		// Get records
+		$countries_record = $this->nm->getData($rowno, $rowperpage, $search_text);
 
 		// Pagination Configuration
 		$config = array();
