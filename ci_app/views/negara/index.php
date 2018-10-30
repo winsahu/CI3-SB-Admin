@@ -6,7 +6,7 @@ $this->load->view('layout/fix_menu');
 <div class="container">
 	<h3 align="center"><?= $title; ?></h3>
 	<div class="row">
-		<div class="col-sm"><div class="alignleft form-inline">
+		<div class="col form-inline">
 			<label class="control-label" for="rowperpage">Tampilkan 
 				<select class="form-control input-sm" name="rowperpage" id="rowperpage">
 					<option value="10"">10</option>
@@ -14,11 +14,11 @@ $this->load->view('layout/fix_menu');
 					<option value="50"">50</option>
 					<option value="100"">100</option>
 				</select> Baris per Halaman
-			</label></div>
+			</label>
 		</div>
-		<div class="col-sm"><div class="alignright form-inline">
+		<div class="coll form-inline">
 			<label class="control-label" for="search_text">Cari : 
-			<input type="search" class="form-control" placeholder="Cari Data" name="search_text" id="search_text"></label></div>
+			<input type="search" class="form-control" placeholder="Cari Data" name="search_text" id="search_text"></label>
 		</div>
 	</div>
 	<div class="row">

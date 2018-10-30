@@ -31,8 +31,6 @@ class Negara extends CI_Controller {
 		$search_text = "";
 		// Row per page
 		$rowperpage = 10;
-		// Row position
-		$rowno = ($pagno - 1) * $rowperpage;
  
 		if ($this->input->post('search_text') != '' ) {
 			$search_text = $this->input->post('search_text');
@@ -43,9 +41,15 @@ class Negara extends CI_Controller {
 
 		// All records count
 		$allcount = $this->nm->count_all($search_text);
-
 		// Get records
 		$countries_record = $this->nm->getData($rowno, $rowperpage, $search_text);
+
+		$max_pagno = ceil($allcount / $rowperpage);
+		if ($pagno > $max_pagno) {
+			$pagno = $max_pagno;
+		}
+		// Row position
+		$rowno = ($pagno - 1) * $rowperpage;
 
 		// Pagination Configuration
 		$config = array();
@@ -84,7 +88,10 @@ class Negara extends CI_Controller {
 		$data['row'] = $rowno;
 		$data['search_text'] = $search_text;
 
-		echo json_encode($data);
+		//echo json_encode($data);
+		$this->output
+		->set_content_type('application/json')
+		->set_output(json_encode($data));
 	}
 }
 
