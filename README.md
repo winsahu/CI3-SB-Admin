@@ -43,4 +43,4 @@ $this->load->view('layout/footer');
 ```
 3. Untuk file views/layout/header.php dan file views/layout/footer.php serta file views/layout/fix_menu.php dapat dilihat sendiri<br />
 <br />
-Saat ini sudah ditambahkan proses login menggunakan ajax;
+Saat ini sudah ditambahkan proses login menggunakan ajax juga codeigniter pagination + ajax
