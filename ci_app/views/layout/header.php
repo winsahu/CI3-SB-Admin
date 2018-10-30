@@ -9,11 +9,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+<link rel="icon" href="<?= site_url('assets/img/favicon.ico'); ?>">
 <title><?= $title; ?></title>
 <!-- Bootstrap core CSS-->
-<link type="text/css" rel="stylesheet" href="<?php echo site_url('assets/vendor/bootstrap/css/bootstrap.min.css'); ?>">
+<link type="text/css" rel="stylesheet" href="<?= site_url('assets/vendor/bootstrap/css/bootstrap.min.css'); ?>">
 <!-- Custom fonts for this template-->
-<link type="text/css" rel="stylesheet" href="<?php echo site_url('assets/vendor/fontawesome-free/css/all.min.css'); ?>">
 <?php if (! empty($cssheader)) {
 	foreach($cssheader as $css) {
 		echo '<link rel="stylesheet" href="' . site_url('assets/') . $css . '">' . "\n";
