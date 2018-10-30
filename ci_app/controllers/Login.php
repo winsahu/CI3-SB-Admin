@@ -39,11 +39,14 @@ class Login extends CI_Controller {
 				$output['redirect'] = site_url('mahasiswa/index');
 			}
 		} else {
-			$output['status'] = 'fail';
+			$output['status'] = 'failed';
 			$output['pesan'] = 'User Name pilih antara: admin, dosen, mahasiswa, operator - Password untuk semua adalah : H4ru5.151';
 			$output['redirect'] = site_url('login/index');
 		}
-		echo json_encode($output);
+		//echo json_encode($output);
+		$this->output
+		->set_content_type('application/json')
+		->set_output(json_encode($output));
 	}
 
 	public function logout() {

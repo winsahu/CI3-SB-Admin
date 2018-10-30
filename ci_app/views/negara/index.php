@@ -5,8 +5,8 @@ $this->load->view('layout/fix_menu');
 ?>
 <div class="container">
 	<h3 align="center"><?= $title; ?></h3>
-	<div class="row form-inline">
-		<div class="col-sm text-left">
+	<div class="row">
+		<div class="col-sm"><div class="alignleft form-inline">
 			<label class="control-label" for="rowperpage">Tampilkan 
 				<select class="form-control input-sm" name="rowperpage" id="rowperpage">
 					<option value="10"">10</option>
@@ -14,14 +14,11 @@ $this->load->view('layout/fix_menu');
 					<option value="50"">50</option>
 					<option value="100"">100</option>
 				</select> Baris per Halaman
-			</label>
+			</label></div>
 		</div>
-		<div class="col-sm">
-			&nbsp;
-		</div>
-		<div class="col-sm text-right">
-			<label class="control-label" for="search_text">Cari: </label>
-			<input type="search" class="form-control" placeholder="Cari Data" name="search_text" id="search_text">
+		<div class="col-sm"><div class="alignright form-inline">
+			<label class="control-label" for="search_text">Cari : 
+			<input type="search" class="form-control" placeholder="Cari Data" name="search_text" id="search_text"></label></div>
 		</div>
 	</div>
 	<div class="row">
@@ -36,10 +33,8 @@ $this->load->view('layout/fix_menu');
 			</table>
 		</div>
 	</div>
-	<div class="row">
- 		<!-- Paginate -->
-		<div align="right" style='margin-top: 10px;' id='pagination'></div>
-	</div>
+	<!-- Paginate -->
+	<div class="alignright" style='margin-top: 10px;' id='pagination'></div>
 </div>
 <?php
 $this->load->view('layout/footer');

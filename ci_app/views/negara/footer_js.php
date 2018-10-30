@@ -2,15 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <script type="text/javascript">
-var pageno;
-var rowperpage;
-var search_text;
 $(document).ready(function() {
 	$('#rowperpage').value = 10;
 	$("#search_text").value = '';
-	pageno = 1;
-	rowperpage = $('#rowperpage').val();
-	search_text = $("#search_text").val();
+	var pageno = 1;
+	var rowperpage = $('#rowperpage').val();
+	var search_text = $("#search_text").val();
 
 	loadPagination(pageno, rowperpage, search_text);
 

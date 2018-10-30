@@ -23,7 +23,7 @@ $(document).ready(function() {
                 }
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                console.log( 'something went wrong', textStatus, errorThrown );
+                console.log( 'Ada sesuatu yang salah', textStatus, errorThrown );
                 if (jqXHR.status) {
                     console.log(jqXHR.responseText);
                 }
