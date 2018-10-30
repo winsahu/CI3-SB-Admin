@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item">
-				<a class="nav-link" href="#">Action 1</a>
+				<a class="nav-link" href="<?= site_url('negara') ?>">Negara</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#">Action 2</a>

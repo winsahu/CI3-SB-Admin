@@ -29,6 +29,32 @@ class Negara_model extends CI_Model {
 		$this->load->database($dbconfig);
 	}
 
+	// Get records
+	public function getData($rowno, $rowperpage, $search="") {
+		$this->db->select('*');
+		$this->db->from($this->tbl_name);
+		if (! empty($search)) {
+			$this->db->like('country_code', $search);
+			$this->db->or_like('country_name', $search);
+		}
+		$this->db->limit($rowperpage, $rowno);
+		$query = $this->db->get();
+ 
+		return $query->result_array();
+	}
+
+	// Get records count
+	public function count_all($search="") {
+		$this->db->from($this->tbl_name);
+		if ($search != '') {
+			$this->db->like('country_code', $search);
+			$this->db->or_like('country_name', $search);
+			$query = $this->db->get();
+			return $query->num_rows();
+		} else {
+			return $this->db->count_all_results();
+		}
+	}
 }
 
 ?>

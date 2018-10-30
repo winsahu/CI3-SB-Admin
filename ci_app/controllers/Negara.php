@@ -12,10 +12,12 @@ class Negara extends CI_Controller {
 
 	public function index()	{
 		$data['title'] = 'Table Negara with Pagination + AJAX';
-		$data['modalfooter'] = "";
-		$data['jsfooter'] = "negara/footer_js";
+		//$data['footer_modal'] = "negara/footer_modal";
+		$data['footer_modal'] = "";
+		$data['footer_js'] = "negara/footer_js";
 		//pastikan semua file css berada pada folder assets/css
-		$data['cssheader'] = array("vendor/fontawesome-free/css/all.css","vendor/bootstrap/datepicker/css/bootstrap-datepicker.min.css");
+		$data['cssheader'] = array("vendor/fontawesome-free/css/all.css","vendor/bootstrap/datepicker/css/bootstrap-datepicker.min.css", "css/style.css");
+		$this->load->view('negara/index', $data);
 	}
 
 	public function loadRecord($pagno=1) {
