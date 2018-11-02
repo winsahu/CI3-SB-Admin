@@ -35,12 +35,13 @@ class Negara extends CI_Controller {
 		if ($this->input->post('search_text') != '' ) {
 			$search_text = $this->input->post('search_text');
 		}
-		if ($this->input->post('rowperpage') != 10 ) {
-			$rowperpage = $this->input->post('rowperpage');
-		}
 
 		// All records count
 		$allcount = $this->nm->count_all($search_text);
+
+		if ($this->input->post('rowperpage') != 10 ) {
+			$rowperpage = $this->input->post('rowperpage');
+		}
 
 		$max_pagno = ceil($allcount / $rowperpage);
 		if ($pagno > $max_pagno) {

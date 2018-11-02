@@ -28,7 +28,7 @@ class Admin extends CI_Controller {
 		//$data['footer_modal'] = 'welcome/footer_modal';
 		$data['footer_modal'] = '';
 		$data['footer_js'] = 'welcome/footer_js';
-		$this->load->view('welcome/index', $data);
+		$this->load->view('welcome/v_admin', $data);
 	}
 }
 ?>

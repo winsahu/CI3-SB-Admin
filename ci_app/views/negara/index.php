@@ -5,20 +5,20 @@ $this->load->view('layout/fix_menu');
 ?>
 <div class="container">
 	<h3 align="center"><?= $title; ?></h3>
-	<div class="row">
-		<div class="col form-inline">
-			<label class="control-label" for="rowperpage">Tampilkan 
+	<div class="d-flex">
+		<div class="form-inline">
+			<label class="control-label" for="rowperpage">Menampilkan :&nbsp;
 				<select class="form-control input-sm" name="rowperpage" id="rowperpage">
 					<option value="10"">10</option>
 					<option value="25"">25</option>
 					<option value="50"">50</option>
 					<option value="100"">100</option>
-				</select> Baris per Halaman
+				</select>&nbsp; Baris per Halaman
 			</label>
 		</div>
-		<div class="coll form-inline">
-			<label class="control-label" for="search_text">Cari : 
-			<input type="search" class="form-control" placeholder="Cari Data" name="search_text" id="search_text"></label>
+		<div class="ml-auto form-inline">
+			<label class="control-label" for="search_text">Cari : &nbsp;
+			<input type="search" class="form-control input-sm" placeholder="Cari Data" name="search_text" id="search_text"></label>
 		</div>
 	</div>
 	<div class="row">
@@ -33,9 +33,12 @@ $this->load->view('layout/fix_menu');
 			</table>
 		</div>
 	</div>
+</div>
+<div class="container">
 	<!-- Paginate -->
 	<div class="alignright" style='margin-top: 10px;' id='pagination'></div>
 </div>
+
 <?php
 $this->load->view('layout/footer');
 ?>

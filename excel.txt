@@ -1,0 +1,25 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Excel extends CI_Controller {
+
+	public function index()	{
+		
+	}
+
+	public function export2xls() {
+		require(APPPATH . 'excel/vendor/autoload.php');
+
+		use PhpOffice\PhpSpreadsheet\Spreadsheet;
+		use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+ 
+		$spreadsheet = new Spreadsheet();
+		$sheet = $spreadsheet->getActiveSheet();
+		$sheet->setCellValue('A1', 'Hello World !');
+
+		$writer = new Xlsx($spreadsheet);
+		$writer->save('hello world.xlsx');
+	} 
+
+}
+?>
