@@ -60,6 +60,8 @@ $(document).ready(function() {
 		$('#fotoku').html('');
 		$('[name="photo"]').val('');
 		$('.help-block').text('');
+		$('#label-photo').show();
+		$('input[name="photo"]').show();
 	});
 });
 /*
@@ -195,8 +197,8 @@ function btnHapusClick(id) {
 			$('#photo-preview').show(); // show photo preview modal
 			if (data.photo) {
 				$('#fotoku').html('<img src="'+base_url+'upload/'+data.photo+'" class="img-fluid" width="300px" height="300px">'); // show photo
-				$('#label-photo').text('');
-				$('input[name="photo"]').val('');
+				$('#label-photo').hide();
+				$('input[name="photo"]').hide();
 			}
 			else {
 				$('#label-photo').text(''); // label photo upload
