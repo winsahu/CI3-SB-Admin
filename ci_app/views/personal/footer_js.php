@@ -125,8 +125,8 @@ function reload_table() {
 }
 
 function btnTambahClick() {
-	//$('#btnSubmit').removeClass();
-	//$('#btnSubmit').addClass("btn btn-primary");
+	$('#btnSubmit').removeClass();
+	$('#btnSubmit').addClass("btn btn-success");
 	$('#btnSubmit').attr("data-aksi", "tambah");
 	$('#btnSubmit').attr("data-id", 0);
 	$('#btnSubmit').text('Tambah');
@@ -156,11 +156,11 @@ function btnUbahClick(id) {
 			}
 			else {
 				$('#label-photo').text('Unggah Photo'); // label photo upload
-				$('#photo-preview').text('(No photo)');
+				$('#fotoku').text('(No photo)');
 			}
 
-			//$('#btnSubmit').removeClass();
-			//$('#btnSubmit').addClass("btn btn-primary");
+			$('#btnSubmit').removeClass();
+			$('#btnSubmit').addClass("btn btn-primary");
 			$('#btnSubmit').attr("data-aksi", "ubah");
 			$('#btnSubmit').attr("data-id", id);
 			$('#btnSubmit').text('Ubah');
@@ -195,15 +195,15 @@ function btnHapusClick(id) {
 			$('#photo-preview').show(); // show photo preview modal
 			if (data.photo) {
 				$('#fotoku').html('<img src="'+base_url+'upload/'+data.photo+'" class="img-fluid" width="300px" height="300px">'); // show photo
-				$('#label-photo').hide();
-				$('input[name="photo"]').hide();
+				$('#label-photo').text('');
+				$('input[name="photo"]').val('');
 			}
 			else {
 				$('#label-photo').text(''); // label photo upload
-				$('#photo-preview').text('');
+				$('#fotoku').text('');
 			}
-			//$('#btnSubmit').removeClass();
-			//$('#btnSubmit').addClass("btn btn-danger");
+			$('#btnSubmit').removeClass();
+			$('#btnSubmit').addClass("btn btn-danger");
 			$('#btnSubmit').attr("data-aksi", "hapus");
 			$('#btnSubmit').attr("data-id", id);
 			$('#btnSubmit').text('Hapus');

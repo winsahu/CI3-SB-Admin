@@ -24,7 +24,7 @@ $this->load->view('layout/fix_menu');
 			<input type="search" class="form-control input-sm" placeholder="Cari Data" name="search_text" id="search_text"></label>
 		</div>
 	</div>
-	<div class="table-responsive">
+	<div class="table-responsive border border-primary">
 		<table id="tblPerson" class="table table-striped table-bordered" cellspacing="0" width="100%">
 			<thead class="thead-dark"><tr>
 				<th scope="col">Rec No</th>
@@ -37,7 +37,7 @@ $this->load->view('layout/fix_menu');
 				<th scope="col" width="170px;">Ubah/Hapus</th>
 			</tr></thead>
 			<tbody></tbody>
-			<tfoot><tr>
+			<tfoot class="thead-dark"><tr>
 				<th scope="col">Rec No</th>
 				<th scope="col">Nama Depan</th>
 				<th scope="col">Nama Belakang</th>

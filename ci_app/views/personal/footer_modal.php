@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<div class="modal fade" id="modal_form" role="dialog" tabindex="-1" >
-	<div class="modal-dialog">
+<div class="modal fade" id="modal_form" role="dialog" tabindex="-1" aria-labelledby="modal_formTitle" aria-hidden="true">
+	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<!-- Modal Header -->
 			<div class="modal-header">
@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="form-group form-inline">
                             <label class="control-label col-md-3" id="label-photo">Unggah Photo </label>
                             <div class="col-md-9">
-                                <input name="photo" type="file">
+                                <input type="file" class="form-control-file" name="photo">
                                 <span class="help-block"></span>
                             </div>
                         </div>

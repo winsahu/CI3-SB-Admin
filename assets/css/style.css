@@ -28,3 +28,6 @@ body {
   margin: 0;
   text-align: justify;
 }
+.table {
+  border: 2px;
+}
