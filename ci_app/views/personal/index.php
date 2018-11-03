@@ -24,33 +24,35 @@ $this->load->view('layout/fix_menu');
 			<input type="search" class="form-control input-sm" placeholder="Cari Data" name="search_text" id="search_text"></label>
 		</div>
 	</div>
-	<table id="tblPerson" class="table table-striped table-bordered" cellspacing="0" width="100%">
-		<thead><tr>
-			<th>Rec No</th>
-			<th>Nama Depan</th>
-			<th>Nama Belakang</th>
-			<th>Kelamin</th>
-			<th>Alamat</th>
-			<th>Tanggal Lahir</th>
-			<th>Foto</th>
-			<th width="170px;">Ubah/Hapus</th>
-		</tr></thead>
-		<tbody></tbody>
-		<tfoot><tr>
-			<th>Rec No</th>
-			<th>Nama Depan</th>
-			<th>Nama Belakang</th>
-			<th>Kelamin</th>
-			<th>Alamat</th>
-			<th>Tanggal Lahir</th>
-			<th>Foto</th>
-			<th>Ubah/Hapus</th>
-		</tr></tfoot>
-	</table>
+	<div class="table-responsive">
+		<table id="tblPerson" class="table table-striped table-bordered" cellspacing="0" width="100%">
+			<thead class="thead-dark"><tr>
+				<th scope="col">Rec No</th>
+				<th scope="col">Nama Depan</th>
+				<th scope="col">Nama Belakang</th>
+				<th scope="col">Kelamin</th>
+				<th scope="col">Alamat</th>
+				<th scope="col">Tanggal Lahir</th>
+				<th scope="col">Foto</th>
+				<th scope="col" width="170px;">Ubah/Hapus</th>
+			</tr></thead>
+			<tbody></tbody>
+			<tfoot><tr>
+				<th scope="col">Rec No</th>
+				<th scope="col">Nama Depan</th>
+				<th scope="col">Nama Belakang</th>
+				<th scope="col">Kelamin</th>
+				<th scope="col">Alamat</th>
+				<th scope="col">Tanggal Lahir</th>
+				<th scope="col">Foto</th>
+				<th scope="col" width="170px;">Ubah/Hapus</th>
+			</tr></tfoot>
+		</table>
+	</div>
 </div>
 <div class="container">
 	<!-- Paginate -->
-	<div class="text-right" style='margin-top: 10px;' id='pagination'></div>
+	<div class="float-right text-right" style='margin-top: 10px;' id='pagination'></div>
 </div>
 <?php
 $this->load->view('layout/footer');

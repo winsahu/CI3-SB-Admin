@@ -3,6 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <script src="<?= site_url('assets/vendor/bootstrap/datepicker/js/bootstrap-datepicker.min.js'); ?>"></script>
 <script type="text/javascript">
+/*
+Letakan semua variable global diluar document ready function
+*/
 var base_url = '<?= site_url();?>';
 var pageno = 1;
 var rowperpage = 10;
@@ -59,10 +62,13 @@ $(document).ready(function() {
 		$('.help-block').text('');
 	});
 });
+/*
+Letakan semua deklarasi function diluar document ready function
+*/
 
 // Load Record in pagination
 function loadRecord(pagno=1, numrows=10, stext='') {
-	var furl = "<?= site_url('personal/loadRecord/')?>"+pagno
+	var furl = base_url+"personal/loadRecord/"+pagno;
 	$.ajax({
 		url: furl,
 		type: 'POST',
@@ -84,7 +90,7 @@ function loadRecord(pagno=1, numrows=10, stext='') {
 
 // Display table list
 function createTable(result, sno) {
-	var photo_url = "<?= site_url('upload/'); ?>";
+	var photo_url = base_url+"upload/";
 	sno = Number(sno);
 	$('#tblPerson tbody').empty();
 	for (index in result) {
@@ -129,8 +135,9 @@ function btnTambahClick() {
 }
 
 function btnUbahClick(id) {
+	var furl = base_url+"personal/get_by_id/"+id;
 	$.ajax({
-		url: "<?= site_url('personal/get_by_id') ?>/"+id,
+		url: furl,
 		method: "GET",
 		dataType: "JSON",
 		success: function(data) {
@@ -172,7 +179,7 @@ function btnUbahClick(id) {
 }
 
 function btnHapusClick(id) {
-	var furl = "<?= site_url('personal/get_by_id') ?>/"+id;
+	var furl = base_url+"personal/get_by_id/"+id;
 	$.ajax({
 		url: furl,
 		method: "GET",
@@ -304,5 +311,4 @@ function addRecord() {
  		}
 	});
 }
-
 </script>
