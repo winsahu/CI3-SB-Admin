@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<a class="nav-link" href="<?= site_url('negara') ?>">Negara</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">Action 2</a>
+				<a class="nav-link" href="<?= site_url('personal') ?>">Personal</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#">Action 3</a>
