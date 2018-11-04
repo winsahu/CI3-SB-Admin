@@ -28,7 +28,15 @@ body {
   margin: 0;
   text-align: justify;
 }
-.table-bordered th,
-.table-bordered td {
-  border: 5px;
+table.table-bordered{
+  border:2px solid blue;
+}
+table.table-bordered > thead > tr > th{
+  border:2px solid blue;
+}
+table.table-bordered > tbody > tr > td{
+  border:2px solid blue;
+}
+table.table-bordered > tfoot > tr > td{
+  border:2px solid blue;
 }
