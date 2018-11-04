@@ -25,7 +25,7 @@ $this->load->view('layout/fix_menu');
 <div class="container">
 <a class="btn btn-primary text-center" href="<?= site_url('login/logout'); ?>">Logout</a>
 </div>
-
+<br>
 <div class="container">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#demoModal" data-whatever="@mdo">Buka modal utk @mdo</button>
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#demoModal" data-whatever="@fat">Buka modal utk @fat</button>
@@ -36,35 +36,39 @@ $this->load->view('layout/fix_menu');
   <h2>Justify content</h2>
   <p>Use the .justify-content-* classes to change the alignment of flex items. Choose from start (default), end, center, between or around:</p>
   <div class="d-flex justify-content-start bg-secondary mb-3">
-    <div class="p-2 bg-info">Flex item 1</div>
-    <div class="p-2 bg-warning">Flex item 2</div>
-    <div class="p-2 bg-primary">Flex item 3</div>
+    <div class="p-2 bg-info">d-flex justify-content-start item 1</div>
+    <div class="p-2 bg-warning">d-flex justify-content-start item 2</div>
+    <div class="p-2 bg-primary">d-flex justify-content-start item 3</div>
   </div>
   <div class="d-flex justify-content-end bg-secondary mb-3">
-    <div class="p-2 bg-info">Flex item 1</div>
-    <div class="p-2 bg-warning">Flex item 2</div>
-    <div class="p-2 bg-primary">Flex item 3</div>
+    <div class="p-2 bg-info">d-flex justify-content-end item 1</div>
+    <div class="p-2 bg-warning">d-flex justify-content-end item 2</div>
+    <div class="p-2 bg-primary">d-flex justify-content-end item 3</div>
   </div>
   <div class="d-flex justify-content-center bg-secondary mb-3">
-    <div class="p-2 bg-info">Flex item 1</div>
-    <div class="p-2 bg-warning">Flex item 2</div>
-    <div class="p-2 bg-primary">Flex item 3</div>
+    <div class="p-2 bg-info">d-flex justify-content-center item 1</div>
+    <div class="p-2 bg-warning">d-flex justify-content-center item 2</div>
+    <div class="p-2 bg-primary">d-flex justify-content-center item 3</div>
   </div>
   <div class="d-flex justify-content-between bg-secondary mb-3">
-    <div class="p-2 bg-info">Flex item 1</div>
-    <div class="p-2 bg-warning">Flex item 2</div>
-    <div class="p-2 bg-primary">Flex item 3</div>
+    <div class="p-2 bg-info">d-flex justify-content-between item 1</div>
+    <div class="p-2 bg-warning">d-flex justify-content-between item 2</div>
+  </div>
+  <div class="d-flex justify-content-between bg-secondary mb-3">
+    <div class="p-2 bg-info">d-flex justify-content-between item 1</div>
+    <div class="p-2 bg-warning">d-flex justify-content-between item 2</div>
+    <div class="p-2 bg-primary">d-flex justify-content-between item 3</div>
+  </div>
+  <div class="d-flex justify-content-between bg-secondary mb-3">
+    <div class="p-2 bg-info">d-flex justify-content-between item 1</div>
+    <div class="p-2 bg-warning">d-flex justify-content-between item 2</div>
+    <div class="p-2 bg-primary">d-flex justify-content-between item 3</div>
+    <div class="p-2 bg-danger">d-flex justify-content-between item 4</div>
   </div>
   <div class="d-flex justify-content-around bg-secondary mb-3">
-    <div class="p-2 bg-info">Flex item 1</div>
-    <div class="p-2 bg-warning">Flex item 2</div>
-    <div class="p-2 bg-primary">Flex item 3</div>
-  </div>
-  <div class="d-flex justify-content-between bg-secondary mb-3">
-    <div class="p-2 bg-info">Flex item 1</div>
-    <div class="p-2 bg-warning">Flex item 2</div>
-    <div class="p-2 bg-primary">Flex item 3</div>
-    <div class="p-2 bg-danger">Flex item 4</div>
+    <div class="p-2 bg-info">d-flex justify-content-around item 1</div>
+    <div class="p-2 bg-warning">d-flex justify-content-around item 2</div>
+    <div class="p-2 bg-primary">d-flex justify-content-around item 3</div>
   </div>
 </div>
 

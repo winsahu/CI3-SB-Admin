@@ -14,6 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			<div class="modal-body">
 				<form id="form_modal">
+					<input type="hidden" value="" name="id">
 					<div class="form-group">
 						<label for="recipient-name" class="col-form-label">Recipient:</label>
 						<input type="text" class="form-control" name="recipient-name">

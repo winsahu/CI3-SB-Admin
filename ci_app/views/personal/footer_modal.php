@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<!-- Modal body -->
 			<div class="modal-body form">
 				<form action="#" id="pform" class="form-horizontal">
-                    <input type="hidden" value="" name="id"/> 
+                    <input type="hidden" value="" name="id">
                     <div class="form-body">
                         <div class="form-group row">
                             <label class="control-label col-sm-4">Nama Depan</label>

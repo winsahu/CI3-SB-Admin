@@ -14,5 +14,12 @@ $('#demoModal').on('show.bs.modal', function (event) {
 	modal.find('.modal-body input').val(recipient)
 	modal.find('[name="recipient-name"]').next().text('Pesan untuk penerima '+recipient)
 	modal.find('[name="message-text"]').text('Hai '+recipient+' Selamat menempuh ujian akhir semester')
+	modal.find('[name="id"]').val(10)
 })
+$('#form_modal').on('submit', function(e){
+    e.preventDefault();
+    var data = $(this).serialize();
+    alert(data);
+    $('#demoModal').modal('hide');
+});
 </script>
