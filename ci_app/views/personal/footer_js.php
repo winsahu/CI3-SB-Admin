@@ -11,6 +11,9 @@ var pageno = 1;
 var rowperpage = 10;
 var search_text = '';
 
+/*
+Yang didalam document ready function hanyalah inisialisasi variable, mendengarkan event dan pemanggilan function untuk display tampilan
+*/
 $(document).ready(function() {
 	$('#rowperpage').val(10);
 	$("#search_text").val('');
@@ -55,7 +58,7 @@ $(document).ready(function() {
 		todayHighlight: true,  
 	});
 
-	$('#modal_form').on('hidden.bs.modal', function (e) {
+	$('#modal_form').on('hidden.bs.modal', function(e) {
 		$('#pform')[0].reset();
 		$('#fotoku').html('');
 		$('[name="photo"]').val('');
@@ -133,6 +136,7 @@ function btnTambahClick() {
 	$('#btnSubmit').attr("data-id", 0);
 	$('#btnSubmit').text('Tambah');
 	$('.modal-title').text('Tambah Data');
+	$('#label-photo').text('Unggah Photo');
 	$('#modal_form').modal('show');
 }
 
@@ -158,7 +162,7 @@ function btnUbahClick(id) {
 			}
 			else {
 				$('#label-photo').text('Unggah Photo'); // label photo upload
-				$('#fotoku').text('(No photo)');
+				$('#fotoku').text('(Tidak ada foto)');
 			}
 
 			$('#btnSubmit').removeClass();
@@ -197,13 +201,10 @@ function btnHapusClick(id) {
 			$('#photo-preview').show(); // show photo preview modal
 			if (data.photo) {
 				$('#fotoku').html('<img src="'+base_url+'upload/'+data.photo+'" class="img-fluid" width="300px" height="300px">'); // show photo
-				$('#label-photo').hide();
-				$('input[name="photo"]').hide();
 			}
-			else {
-				$('#label-photo').text(''); // label photo upload
-				$('#fotoku').text('');
-			}
+			$('#label-photo').hide();
+			$('input[name="photo"]').hide();
+
 			$('#btnSubmit').removeClass();
 			$('#btnSubmit').addClass("btn btn-danger");
 			$('#btnSubmit').attr("data-aksi", "hapus");

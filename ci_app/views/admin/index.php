@@ -26,6 +26,12 @@ $this->load->view('layout/fix_menu');
 <a class="btn btn-primary text-center" href="<?= site_url('login/logout'); ?>">Logout</a>
 </div>
 
+<div class="container">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#demoModal" data-whatever="@mdo">Buka modal utk @mdo</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#demoModal" data-whatever="@fat">Buka modal utk @fat</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#demoModal" data-whatever="@getbootstrap">Buka modal utk @getbootstrap</button>
+</div>
+
 <div class="container mt-3 text-white">
   <h2>Justify content</h2>
   <p>Use the .justify-content-* classes to change the alignment of flex items. Choose from start (default), end, center, between or around:</p>

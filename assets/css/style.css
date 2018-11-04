@@ -28,6 +28,7 @@ body {
   margin: 0;
   text-align: justify;
 }
-.table {
-  border: 2px;
+.table-bordered th,
+.table-bordered td {
+  border: 5px;
 }

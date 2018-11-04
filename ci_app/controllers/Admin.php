@@ -25,10 +25,9 @@ class Admin extends CI_Controller {
 	public function index()	{
 		$data['title'] = 'Hallo Admin - Welcome to CodeIgniter';
 		$data['cssheader'] = array('vendor/fontawesome-free/css/all.min.css', 'css/sb-admin.min.css', 'css/ci_welcome.css');
-		//$data['footer_modal'] = 'welcome/footer_modal';
-		$data['footer_modal'] = '';
-		$data['footer_js'] = 'welcome/footer_js';
-		$this->load->view('welcome/v_admin', $data);
+		$data['footer_modal'] = 'admin/footer_modal';
+		$data['footer_js'] = 'admin/footer_js';
+		$this->load->view('admin/index', $data);
 	}
 }
 ?>

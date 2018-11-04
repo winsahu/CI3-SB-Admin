@@ -15,23 +15,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<form action="#" id="pform" class="form-horizontal">
                     <input type="hidden" value="" name="id"/> 
                     <div class="form-body">
-                        <div class="form-group form-inline">
-                            <label class="control-label col-md-3">Nama Depan</label>
-                            <div class="col-md-9">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-4">Nama Depan</label>
+                            <div class="col-sm-8">
                                 <input name="firstName" id="firstName" placeholder="First Name" class="form-control" type="text">
                                 <span class="help-block"></span>
                             </div>
                         </div>
-                        <div class="form-group form-inline">
-                            <label class="control-label col-md-3">Nama Belakang</label>
-                            <div class="col-md-9">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-4">Nama Belakang</label>
+                            <div class="col-sm-8">
                                 <input name="lastName" placeholder="Last Name" class="form-control" type="text">
                                 <span class="help-block"></span>
                             </div>
                         </div>
-                        <div class="form-group form-inline">
-                            <label class="control-label col-md-3">Kelamin</label>
-                            <div class="col-md-9">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-4">Kelamin</label>
+                            <div class="col-sm-8">
                                 <select name="gender" class="form-control">
                                     <option value="">--Select Gender--</option>
                                     <option value="pria">Pria</option>
@@ -40,30 +40,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <span class="help-block"></span>
                             </div>
                         </div>
-                        <div class="form-group form-inline">
-                            <label class="control-label col-md-3">Alamat</label>
-                            <div class="col-md-9">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-4">Alamat</label>
+                            <div class="col-sm-8">
                                 <textarea name="address" placeholder="Address" class="form-control"></textarea>
                                 <span class="help-block"></span>
                             </div>
                         </div>
-                        <div class="form-group form-inline">
-                            <label class="control-label col-md-3">Tanggal Lahir</label>
-                            <div class="col-md-9">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-4">Tanggal Lahir</label>
+                            <div class="col-sm-8">
                                 <input name="dob" placeholder="yyyy-mm-dd" class="form-control datepicker" type="text">
                                 <span class="help-block"></span>
                             </div>
                         </div>
-                        <div class="form-group form-inline" id="photo-preview">
-                            <label class="control-label col-md-3">Photo</label>
-                            <div class="col-md-9" id="fotoku">
+                        <div class="form-group row" id="photo-preview">
+                            <label class="control-label col-sm-4">Photo</label>
+                            <div class="col-sm-8" id="fotoku">
                                 (Tak ada foto)
                                 <span class="help-block"></span>
                             </div>
                         </div>
-                        <div class="form-group form-inline">
-                            <label class="control-label col-md-3" id="label-photo">Unggah Photo </label>
-                            <div class="col-md-9">
+                        <div class="form-group row">
+                            <label class="control-label col-sm-4" id="label-photo">Unggah Photo </label>
+                            <div class="col-sm-8">
                                 <input type="file" class="form-control-file" name="photo">
                                 <span class="help-block"></span>
                             </div>
