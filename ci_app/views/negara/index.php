@@ -5,7 +5,7 @@ $this->load->view('layout/fix_menu');
 ?>
 <div class="container">
 	<h3 align="center"><?= $title; ?></h3>
-	<div class="d-flex">
+	<div class="d-flex justify-content-between">
 		<div class="form-inline">
 			<label class="control-label" for="rowperpage">Menampilkan :&nbsp;
 				<select class="form-control input-sm" name="rowperpage" id="rowperpage">
@@ -16,7 +16,7 @@ $this->load->view('layout/fix_menu');
 				</select>&nbsp; Baris per Halaman
 			</label>
 		</div>
-		<div class="ml-auto form-inline">
+		<div class="form-inline">
 			<label class="control-label" for="search_text">Cari : &nbsp;
 			<input type="search" class="form-control input-sm" placeholder="Cari Data" name="search_text" id="search_text"></label>
 		</div>
@@ -35,8 +35,10 @@ $this->load->view('layout/fix_menu');
 	</div>
 </div>
 <div class="container">
-	<!-- Paginate -->
-	<div class="alignright" style='margin-top: 10px;' id='pagination'></div>
+	<div class="d-flex justify-content-end">
+		<!-- Paginate -->
+		<div class="text-right" style='margin-top: 10px;' id='pagination'></div>
+	</div>
 </div>
 
 <?php

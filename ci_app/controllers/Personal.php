@@ -29,7 +29,7 @@ class Personal extends CI_Controller {
 		$search_text = "";
 		// Row per page
 		$rowperpage = 10;
- 
+
 		if ($this->input->post('search_text') != '' ) {
 			$search_text = $this->input->post('search_text');
 		}

@@ -4,6 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Personal_model extends CI_Model {
 
 	var $tbl_name = 'persons';
+	var $orderby = array(
+		'column' => 'id',
+		'dir' => 'ASC'
+	);
 
 	public function __construct() {
 		parent::__construct();
@@ -41,6 +45,10 @@ class Personal_model extends CI_Model {
 			$this->db->or_like('gender', $search);
 			$this->db->or_like('address', $search);
 			$this->db->or_like('dob', $search);
+		}
+		if (isset($_POST['orderby'])) {
+			$this->orderby = $_POST['orderby'];
+			$this->db->order_by($this->orderby['column'], $this->orderby['dir']);
 		}
 		$this->db->limit($rowperpage, $rowno);
 		$query = $this->db->get();

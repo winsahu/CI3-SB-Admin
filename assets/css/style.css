@@ -29,14 +29,72 @@ body {
   text-align: justify;
 }
 table.table-bordered{
-  border:2px solid blue;
+  border:2px solid green;
 }
 table.table-bordered > thead > tr > th{
-  border:2px solid blue;
+  border:1px solid green;
 }
 table.table-bordered > tbody > tr > td{
-  border:2px solid blue;
+  border:1px solid green;
 }
 table.table-bordered > tfoot > tr > td{
-  border:2px solid blue;
+  border:1px solid green;
+}
+table thead > tr > th.sorting_asc,
+table thead > tr > th.sorting_desc,
+table thead > tr > th.sorting,
+table thead > tr > td.sorting_asc,
+table thead > tr > td.sorting_desc,
+table thead > tr > td.sorting {
+  padding-right: 30px;
+}
+table thead > tr > th:active,
+table thead > tr > td:active {
+  outline: none;
+}
+table thead .sorting,
+table thead .sorting_asc,
+table thead .sorting_desc,
+table thead .sorting_asc_disabled,
+table thead .sorting_desc_disabled {
+  cursor: pointer;
+  position: relative;
+}
+table thead .sorting:before, table thead .sorting:after,
+table thead .sorting_asc:before,
+table thead .sorting_asc:after,
+table thead .sorting_desc:before,
+table thead .sorting_desc:after,
+table thead .sorting_asc_disabled:before,
+table thead .sorting_asc_disabled:after,
+table thead .sorting_desc_disabled:before,
+table thead .sorting_desc_disabled:after {
+  position: absolute;
+  bottom: 0.9em;
+  display: block;
+  opacity: 0.3;
+}
+table thead .sorting:before,
+table thead .sorting_asc:before,
+table thead .sorting_desc:before,
+table thead .sorting_asc_disabled:before,
+table thead .sorting_desc_disabled:before {
+  right: 1em;
+  content: "\2191";
+}
+table thead .sorting:after,
+table thead .sorting_asc:after,
+table thead .sorting_desc:after,
+table thead .sorting_asc_disabled:after,
+table thead .sorting_desc_disabled:after {
+  right: 0.5em;
+  content: "\2193";
+}
+table thead .sorting_asc:before,
+table thead .sorting_desc:after {
+  opacity: 1;
+}
+table thead .sorting_asc_disabled:before,
+table thead .sorting_desc_disabled:after {
+  opacity: 0;
 }

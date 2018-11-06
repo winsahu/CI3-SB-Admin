@@ -10,6 +10,7 @@ var base_url = '<?= site_url();?>';
 var pageno = 1;
 var rowperpage = 10;
 var search_text = '';
+var order = {};
 
 /*
 Yang didalam document ready function hanyalah inisialisasi variable, mendengarkan event dan pemanggilan function untuk display tampilan
@@ -19,6 +20,8 @@ $(document).ready(function() {
 	$("#search_text").val('');
 	rowperpage = $('#rowperpage').val();
 	search_text = $("#search_text").val();
+	order['column'] = 'id';
+	order['dir'] = 'ASC';
 
 	loadRecord(pageno, rowperpage, search_text);
 
@@ -40,7 +43,7 @@ $(document).ready(function() {
 		rowperpage = Number($('#rowperpage').val());
 		loadRecord(pageno, rowperpage, search_text);
 	});
-
+	
 	$('#btnSubmit').click(function(e) {
 		e.preventDefault();
 		var aksi = $(this).attr('data-aksi');
@@ -66,6 +69,37 @@ $(document).ready(function() {
 		$('#label-photo').show();
 		$('input[name="photo"]').show();
 	});
+
+	$('th').click(function(event) {
+		var curTarget = event.currentTarget;
+		var theText = curTarget.innerText;
+		if (theText == 'Nama Depan') {
+			order['column'] = 'firstName';
+		} else if (theText == 'Nama Belakang') {
+			order['column'] = 'lastName';
+		} else if (theText == 'Kelamin') {
+			order['column'] = 'gender';
+		} else if (theText == 'Alamat') {
+			order['column'] = 'address';
+		} else if (theText == 'Tanggal Lahir') {
+			order['column'] = 'dob';
+		}
+		var theClass = curTarget.className;
+		$('th#sorting').removeClass();
+		$('th#sorting').addClass('sorting');
+		if (theClass == 'sorting') {
+			$(this).removeClass('sorting');
+			$(this).addClass('sorting_asc');
+			order['dir'] = 'ASC';
+		} else if (theClass == 'sorting_asc') {
+			$(this).removeClass('sorting');
+			$(this).addClass('sorting_desc');
+			order['dir'] = 'DESC';
+		} else if (theClass == 'sorting_desc') {
+			order['dir'] = 'RANDOM';
+		}
+		loadRecord(pageno, rowperpage, search_text);
+	})
 });
 /*
 Letakan semua deklarasi function diluar document ready function
@@ -74,10 +108,11 @@ Letakan semua deklarasi function diluar document ready function
 // Load Record in pagination
 function loadRecord(pagno=1, numrows=10, stext='') {
 	var furl = base_url+"personal/loadRecord/"+pagno;
+	console.log(order);
 	$.ajax({
 		url: furl,
 		type: 'POST',
-		data: {rowperpage: numrows, search_text: stext},
+		data: {rowperpage: numrows, search_text: stext, orderby: order},
 		dataType: 'JSON',
 		success: function(response) {
 			$('#pagination').html(response.pagination);
@@ -108,18 +143,18 @@ function createTable(result, sno) {
 		var photo = result[index]['photo'];
 		sno+=1;
 		var tr = "<tr>";
-		tr += "<td>" + sno + "</td>";
-		tr += "<td>" + firstName + "</td>";
-		tr += "<td>" + lastName + "</td>";
-		tr += "<td>" + gender + "</td>";
-		tr += "<td>" + address + "</td>";
-		tr += "<td>" + dob + "</td>";
+		tr += "<td class='align-middle'>" + sno + "</td>";
+		tr += "<td class='align-middle'>" + firstName + "</td>";
+		tr += "<td class='align-middle'>" + lastName + "</td>";
+		tr += "<td class='align-middle'>" + gender + "</td>";
+		tr += "<td class='align-middle'>" + address + "</td>";
+		tr += "<td class='align-middle'>" + dob + "</td>";
 		if ((photo === '') || (photo === null)) {
-			tr += "<td>(Tak ada foto)</td>";
+			tr += "<td class='align-middle'>(Tak ada foto)</td>";
 		} else {
-			tr += "<td><a href='"+photo_url+photo+ "' target='_blank'><img src='"+photo_url+photo+"' class='img-responsive' width='70px' height='70px'></a></td>";
+			tr += "<td class='align-middle'><a href='"+photo_url+photo+ "' target='_blank'><img src='"+photo_url+photo+"' class='img-responsive' width='70px' height='70px'></a></td>";
 		}
-		tr += "<td><button class='btn btn-sm btn-primary' id='btnUbah' onclick='btnUbahClick("+id+")'><i class='fa fa-edit'></i>Ubah</button>&nbsp;<button class='btn btn-sm btn-danger' id='btnHapus' onclick='btnHapusClick("+id+")'><i class='fa fa-trash'></i>Hapus</button></td>";
+		tr += "<td class='align-middle'><button class='btn btn-sm btn-primary' id='btnUbah' onclick='btnUbahClick("+id+")'><i class='fa fa-edit'></i>Ubah</button>&nbsp;<button class='btn btn-sm btn-danger' id='btnHapus' onclick='btnHapusClick("+id+")'><i class='fa fa-trash'></i>Hapus</button></td>";
 		tr += "</tr>";
 		$('#tblPerson tbody').append(tr);
 	}

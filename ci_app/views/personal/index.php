@@ -27,25 +27,25 @@ $this->load->view('layout/fix_menu');
 	<div class="table-responsive border border-primary">
 		<table id="tblPerson" class="table table-striped table-bordered" cellspacing="0" width="100%">
 			<thead class="thead-dark"><tr>
-				<th scope="col">Rec No</th>
-				<th scope="col">Nama Depan</th>
-				<th scope="col">Nama Belakang</th>
-				<th scope="col">Kelamin</th>
-				<th scope="col">Alamat</th>
-				<th scope="col">Tanggal Lahir</th>
-				<th scope="col">Foto</th>
-				<th scope="col" width="170px;">Ubah/Hapus</th>
+				<th class="align-middle text-center" scope="col">Rec No</th>
+				<th id="sorting" class="sorting" scope="col">Nama Depan</th>
+				<th id="sorting" class="sorting" scope="col">Nama Belakang</th>
+				<th id="sorting" class="sorting" scope="col">Kelamin</th>
+				<th id="sorting" class="sorting" scope="col">Alamat</th>
+				<th id="sorting" class="sorting" scope="col">Tanggal Lahir</th>
+				<th class="align-middle text-center" scope="col">Foto</th>
+				<th class="align-middle text-center" scope="col" width="170px;">Ubah/Hapus</th>
 			</tr></thead>
 			<tbody></tbody>
 			<tfoot class="thead-dark"><tr>
-				<th scope="col">Rec No</th>
-				<th scope="col">Nama Depan</th>
-				<th scope="col">Nama Belakang</th>
-				<th scope="col">Kelamin</th>
-				<th scope="col">Alamat</th>
-				<th scope="col">Tanggal Lahir</th>
-				<th scope="col">Foto</th>
-				<th scope="col" width="170px;">Ubah/Hapus</th>
+				<th class="align-middle text-center" scope="col">Rec No</th>
+				<th class="align-middle text-center" scope="col">Nama Depan</th>
+				<th class="align-middle text-center" scope="col">Nama Belakang</th>
+				<th class="align-middle text-center" scope="col">Kelamin</th>
+				<th class="align-middle text-center" scope="col">Alamat</th>
+				<th class="align-middle text-center" scope="col">Tanggal Lahir</th>
+				<th class="align-middle text-center" scope="col">Foto</th>
+				<th class="align-middle text-center" scope="col" width="170px;">Ubah/Hapus</th>
 			</tr></tfoot>
 		</table>
 	</div>
