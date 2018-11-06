@@ -45,4 +45,4 @@ $this->load->view('layout/footer');
 <br />
 Saat ini sudah ditambahkan proses login menggunakan ajax juga codeigniter pagination + ajax
 <br />
-Penambahan CRUD dengan Bootstrap modals, AJAX dan Pagination serta Upload Image
+Penambahan CRUD dengan Bootstrap modals, AJAX dan Pagination, Search, Order By serta Upload Image
