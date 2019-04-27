@@ -18,8 +18,7 @@ class Welcome extends CI_Controller {
 
 	public function index() {
 		$data['title'] = 'Welcome to CodeIgniter';
-		$data['cssheader'] = array('vendor/fontawesome-free/css/all.min.css', 'css/sb-admin.min.css', 'css/ci_welcome.css');
-		//$data['footer_modal'] = 'welcome/footer_modal';
+		$data['cssheader'] = array('assets/vendor/fontawesome-free/css/all.min.css','assets/vendor/datatables/dataTables.bootstrap4.css','assets/css/sb-admin.css');
 		$data['footer_modal'] = '';
 		$data['footer_js'] = 'welcome/footer_js';
 		$this->load->view('welcome/index', $data);

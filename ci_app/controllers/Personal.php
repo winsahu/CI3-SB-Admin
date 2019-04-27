@@ -88,13 +88,19 @@ class Personal extends CI_Controller {
 		$data['rowno'] = $rowno;
 		$data['search_text'] = $search_text;
 
-		echo json_encode($data);
+		//echo json_encode($data);
+		$this->output
+		->set_content_type('application/json')
+		->set_output(json_encode($data));
 	}
 
 	public function get_by_id($id) {
 		$data = $this->pm->get_by_id($id);
 		$data->dob = ($data->dob == '0000-00-00') ? '' : $data->dob; // if 0000-00-00 set tu empty for datepicker compatibility
-		echo json_encode($data);
+		//echo json_encode($data);
+		$this->output
+		->set_content_type('application/json')
+		->set_output(json_encode($data));
 	}
 
 	public function addRecord() {
@@ -115,7 +121,10 @@ class Personal extends CI_Controller {
 
 		$insert = $this->pm->addRecord($data);
 
-		echo json_encode(array("status" => TRUE));
+		//echo json_encode(array("status" => TRUE));
+		$this->output
+		->set_content_type('application/json')
+		->set_output(json_encode(array("status" => TRUE)));
 	}
  
 	public function updRecord($id) {
@@ -144,7 +153,10 @@ class Personal extends CI_Controller {
 		}
 
 		$this->pm->updRecord(array('id' => $id), $data);
-		echo json_encode(array("status" => TRUE));
+		//echo json_encode(array("status" => TRUE));
+		$this->output
+		->set_content_type('application/json')
+		->set_output(json_encode(array("status" => TRUE)));
 	}
  
 	public function delRecord($id) {
@@ -154,7 +166,10 @@ class Personal extends CI_Controller {
 			unlink('upload/'.$person->photo);
 
 		$this->pm->delRecord($id);
-		echo json_encode(array("status" => TRUE));
+		//echo json_encode(array("status" => TRUE));
+		$this->output
+		->set_content_type('application/json')
+		->set_output(json_encode(array("status" => TRUE)));
 	}
 
 	private function _do_upload() {
@@ -171,7 +186,10 @@ class Personal extends CI_Controller {
 			$data['inputerror'][] = 'photo';
 			$data['error_string'][] = 'Upload error: ' . $this->upload->display_errors('',''); //show ajax error
 			$data['status'] = FALSE;
-			echo json_encode($data);
+			//echo json_encode($data);
+			$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode($data));
 			exit();
 		}
 		return $this->upload->data('file_name');
@@ -214,7 +232,10 @@ class Personal extends CI_Controller {
 		}
 
 		if ($data['status'] === FALSE) {
-			echo json_encode($data);
+			//echo json_encode($data);
+			$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode($data));
 			exit();
 		}
 	}

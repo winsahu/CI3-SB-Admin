@@ -31,7 +31,30 @@ $this->load->view('layout/fix_menu');
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#demoModal" data-whatever="@fat">Buka modal utk @fat</button>
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#demoModal" data-whatever="@getbootstrap">Buka modal utk @getbootstrap</button>
 </div>
-
+<div class="container">
+  <button type="button" class="btn btn-success"><i class="fas fa-arrow-up"></i></button>
+  <button type="button" class="btn btn-danger"><i class="fas fa-arrow-down"></i></button>
+  <button type="button" class="btn btn-primary"><i class="fas fa-arrows-alt-v"></i></button>
+  <table class="table table-bordered tablesorter">
+    <caption>table title and/or explanatory text</caption>
+    <thead>
+      <tr>
+        <th> header 1 <i class="fas fa-arrow-up"><i class="fas fa-arrow-down"></i></th>
+        <th> header 2 <i class="fas fa-arrow-up"><i class="fas fa-arrow-down"></i></th>
+        <th> header 3 <i class="fas fa-arrow-up"><i class="fas fa-arrow-down"></i></th>
+        <th> header 4 <i class="fas fa-arrow-up"><i class="fas fa-arrow-down"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <div class="container mt-3 text-white">
   <h2>Justify content</h2>
   <p>Use the .justify-content-* classes to change the alignment of flex items. Choose from start (default), end, center, between or around:</p>

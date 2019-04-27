@@ -6,7 +6,7 @@ class Personal_model extends CI_Model {
 	var $tbl_name = 'persons';
 	var $orderby = array(
 		'column' => 'id',
-		'dir' => 'ASC'
+		'dir' => 'DESC'
 	);
 
 	public function __construct() {

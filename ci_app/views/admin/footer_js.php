@@ -22,4 +22,22 @@ $('#form_modal').on('submit', function(e){
     alert(data);
     $('#demoModal').modal('hide');
 });
+/*
+function getData(selector) {
+	$.ajax({
+		type: "POST",
+		url: '/data-json.php',
+		data: { issession : 1, selector: selector },
+		dataType: "json",
+		success: function(data) {
+			//someFunction(data);
+			return data;
+		},
+		error: function() {
+			var data = 'Error';
+			return data;
+		}
+	});
+}
+*/
 </script>

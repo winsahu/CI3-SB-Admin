@@ -21,7 +21,7 @@ $(document).ready(function() {
 	rowperpage = $('#rowperpage').val();
 	search_text = $("#search_text").val();
 	order['column'] = 'id';
-	order['dir'] = 'ASC';
+	order['dir'] = 'DESC';
 
 	loadRecord(pageno, rowperpage, search_text);
 
@@ -86,16 +86,18 @@ $(document).ready(function() {
 		}
 		var theClass = curTarget.className;
 		$('th#sorting').removeClass();
-		$('th#sorting').addClass('sorting');
-		if (theClass == 'sorting') {
-			$(this).removeClass('sorting');
-			$(this).addClass('sorting_asc');
+		$('th#sorting').addClass('align-middle text-center sorting');
+		if (theClass == 'align-middle text-center sorting') {
+			$(this).removeClass('align-middle text-center sorting');
+			$(this).addClass('align-middle text-center sorting_asc');
 			order['dir'] = 'ASC';
-		} else if (theClass == 'sorting_asc') {
-			$(this).removeClass('sorting');
-			$(this).addClass('sorting_desc');
+		} else if (theClass == 'align-middle text-center sorting_asc') {
+			$(this).removeClass('align-middle text-center sorting_asc');
+			$(this).addClass('align-middle text-center sorting_desc');
 			order['dir'] = 'DESC';
-		} else if (theClass == 'sorting_desc') {
+		} else if (theClass == 'align-middle text-center sorting_desc') {
+			$(this).removeClass('align-middle text-center sorting_desc');
+			$(this).addClass('align-middle text-center sorting');
 			order['dir'] = 'RANDOM';
 		}
 		loadRecord(pageno, rowperpage, search_text);

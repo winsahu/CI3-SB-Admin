@@ -65,17 +65,17 @@ $this->load->view('layout/fix_menu');
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-6 text-center"><i class="fa fa-car"> Font Awesome normal size</i></div>
-		<div class="col-md-6 text-center"><i class="fa fa-car" style="font-size:48px;"> Font Awesome 48px</i></div>
+		<div class="col-md-6 text-center"><i class="fas fa-car"> Font Awesome normal size</i></div>
+		<div class="col-md-6 text-center"><i class="fas fa-car" style="font-size:48px;"> Font Awesome 48px</i></div>
 	</div><br>
 
 	<div class="row">
-		<div class="col-md-12 text-center"><i class="fa fa-car" style="font-size:60px;color:red;"> Font Awesome 60px</i></div>
+		<div class="col-md-12 text-center"><i class="fas fa-car" style="font-size:60px;color:red;"> Font Awesome 60px</i></div>
 	</div><br>
 
 	<div class="row">
-		<div class="col-md-6 text-center"><i class="fa fa-trash" style="font-size:16px;"> Font Awesome Trash 16px</i></div>
-		<div class="col-md-6 text-center"><i class="fa fa-edit" style="font-size:16px;"> Font Awesome Edit 16px</i></div>
+		<div class="col-md-6 text-center"><i class="fas fa-trash" style="font-size:16px;"> Font Awesome Trash 16px</i></div>
+		<div class="col-md-6 text-center"><i class="fas fa-edit" style="font-size:16px;"> Font Awesome Edit 16px</i></div>
 	</div>
 
 	<br><br>

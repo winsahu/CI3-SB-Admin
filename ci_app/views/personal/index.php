@@ -28,24 +28,24 @@ $this->load->view('layout/fix_menu');
 		<table id="tblPerson" class="table table-striped table-bordered" cellspacing="0" width="100%">
 			<thead class="thead-dark"><tr>
 				<th class="align-middle text-center" scope="col">Rec No</th>
-				<th id="sorting" class="sorting" scope="col">Nama Depan</th>
-				<th id="sorting" class="sorting" scope="col">Nama Belakang</th>
-				<th id="sorting" class="sorting" scope="col">Kelamin</th>
-				<th id="sorting" class="sorting" scope="col">Alamat</th>
-				<th id="sorting" class="sorting" scope="col">Tanggal Lahir</th>
+				<th id="sorting" class="align-middle text-center sorting" scope="col">Nama Depan</th>
+				<th id="sorting" class="align-middle text-center sorting" scope="col">Nama Belakang</th>
+				<th id="sorting" class="align-middle text-center sorting" scope="col">Kelamin</th>
+				<th id="sorting" class="align-middle text-center sorting" scope="col">Alamat</th>
+				<th id="sorting" class="align-middle text-center sorting" scope="col">Tanggal Lahir</th>
 				<th class="align-middle text-center" scope="col">Foto</th>
 				<th class="align-middle text-center" scope="col" width="170px;">Ubah/Hapus</th>
 			</tr></thead>
 			<tbody></tbody>
 			<tfoot class="thead-dark"><tr>
-				<th class="align-middle text-center" scope="col">Rec No</th>
-				<th class="align-middle text-center" scope="col">Nama Depan</th>
-				<th class="align-middle text-center" scope="col">Nama Belakang</th>
-				<th class="align-middle text-center" scope="col">Kelamin</th>
-				<th class="align-middle text-center" scope="col">Alamat</th>
-				<th class="align-middle text-center" scope="col">Tanggal Lahir</th>
-				<th class="align-middle text-center" scope="col">Foto</th>
-				<th class="align-middle text-center" scope="col" width="170px;">Ubah/Hapus</th>
+				<th width="6%" class="align-middle text-center" scope="col">Rec No</th>
+				<th width="15%" class="align-middle text-center" scope="col">Nama Depan</th>
+				<th width="16%" class="align-middle text-center" scope="col">Nama Belakang</th>
+				<th width="6%" class="align-middle text-center" scope="col">Kelamin</th>
+				<th width="20%" class="align-middle text-center" scope="col">Alamat</th>
+				<th width="13%" class="align-middle text-center" scope="col">Tanggal Lahir</th>
+				<th width="8%" class="align-middle text-center" scope="col">Foto</th>
+				<th width="16%" class="align-middle text-center" scope="col" width="170px;">Ubah/Hapus</th>
 			</tr></tfoot>
 		</table>
 	</div>
